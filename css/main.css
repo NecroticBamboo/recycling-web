@@ -88,6 +88,12 @@ a:visited {
     padding: 24px;
 }
 
+.copyright{
+    text-align: right;
+    font-size: 9px;
+    font-size-adjust: auto;
+    color: grey;
+}
 .picture,
 .graph {
     max-width: 100%;
