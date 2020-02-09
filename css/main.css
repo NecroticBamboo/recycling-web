@@ -1,0 +1,130 @@
+html {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    color: #4e9696;
+    font-family: 'Poiret One', cursive;
+}
+
+body {
+    margin: 0;
+    box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    /*    background-color: #d2f4dd;*/
+}
+
+body > .flex-container {
+    max-width: 1264px;
+    justify-content: space-between;
+    /*    background: aqua;*/
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header,
+.footer {
+    background-color: #5fb49c;
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    color: white;
+}
+
+.flex-container {
+    /*    background-color: #75dddd;*/
+    position: relative;
+    flex: 1 0 auto;
+    text-align: left;
+}
+
+.flex-item-aside {
+    padding-top: 10px;
+    /*    background-color: chartreuse;*/
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.sidebar-navigation {
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    list-style-type: none;
+    position: sticky;
+    top: 0;
+    /*    overflow-y: auto;*/
+}
+
+.navigation {
+    display: block;
+    width: inherit;
+    position: static;
+    margin-bottom: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #5fb49c;
+}
+
+a:visited {
+    color: red;
+}
+
+.flex-item-main {
+    /*    text-align: center;*/
+    max-width: 1064px;
+    box-sizing: border-box;
+    /*    border: 1px solid blue;*/
+    padding: 24px;
+}
+
+.picture,
+.graph {
+    max-width: 100%;
+    height: auto;
+}
+
+.map {
+    width: 600px;
+    height: 450px;
+}
+
+@media screen and (max-device-width: 450px) {
+
+    .flex-item-aside {
+        width: 100%;
+    }
+
+    .flex-item-main {
+        width: 100%;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .map {
+        width: 450px;
+        height: 300px;
+    }
+
+    .navigation {
+        padding-top: 15px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+}
