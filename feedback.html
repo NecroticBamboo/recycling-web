@@ -1,63 +1,125 @@
-<!DOCKTYPE HTML5>
+<!DOCTYPE HTML>
     <html lang="en">
 
     <head>
-        <title> First page </title>
-        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Poiret+One&display=swap" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-    </head>
+    <meta charset="utf-8" />
+    <title> Feedback </title>
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic%7CPoiret+One&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
 
-    <body>
-        <header class="header">
-            <h1> Welcome </h1>
-            <div class="flex-container-header">
-                <div class="navigation-header">
-                    <a href="template.html"> Template</a>
-                </div>
-                <div class="navigation-header">
-                    <a href="index.html"> Home </a>
-                </div>
-                <div class="navigation-header">
-                    <a href="the_problem.html"> The problem</a>
-                </div>
-                <div class="navigation-header">
-                    <a href="utilisation.html"> Utilisation </a>
-                </div>
-                <div class="navigation-header">
-                    <a href="handling.html"> Handling</a>
-                </div>
-                <div class="navigation-header">
-                    <a href="recycling.html"> Recycling</a>
-                </div>
-                <div class="navigation-header-selected">
-                    Feedback
-                </div>
-                <div class="navigation-header">
-                    <a href="links.html"> Links</a>
-                </div>
+<body>
+    <header class="header">
+        <h1> Welcome </h1>
+        <div class="flex-container-header">
+            <div class="navigation-header">
+                <a href="template.html"> Template</a>
             </div>
-        </header>
-        <div class="flex-container">
-            <div class="flex-item-aside">
-                <div class="sidebar-navigation">
-                    <nav class="navigation">
-                        <a href="#stuff"> Introduction</a> <br>
-                        <a href="#stuff2"> Problem with rubbish </a> <br>
-                        <a href="#stuff3"> What is recyclable</a> <br>
-                        <a href="#stuff4"> What is not recyclable</a> <br>
-                        <a href="#stuff5"> How to recycle</a> <br>
-                        <a href="#stuff6"> Useful links</a>
-                    </nav>
-                </div>
+            <div class="navigation-header">
+                <a href="index.html"> Home </a>
             </div>
-            <div class="flex-item-main">
-                <h1> Stuff </h1>
-                <p> TLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="navigation-header">
+                <a href="the_problem.html"> The problem</a>
+            </div>
+            <div class="navigation-header">
+                <a href="utilisation.html"> Utilisation </a>
+            </div>
+            <div class="navigation-header">
+                <a href="handling.html"> Handling</a>
+            </div>
+            <div class="navigation-header">
+                <a href="recycling.html"> Recycling</a>
+            </div>
+            <div class="navigation-header-selected">
+                Feedback
+            </div>
+            <div class="navigation-header">
+                <a href="links.html"> Links</a>
             </div>
         </div>
-        <footer class="footer">
-            <h1 class="footer"> Thanks for visiting our website! </h1>
-        </footer>
-    </body>
-
-    </html>
+    </header>
+    <div class="flex-container">
+        <div class="flex-item-aside">
+            <div class="sidebar-navigation">
+                <nav class="navigation">
+                    <a href="#stuff"> Introduction</a> <br>
+                    <a href="#stuff2"> Problem with rubbish </a> <br>
+                    <a href="#stuff3"> What is recyclable</a> <br>
+                    <a href="#stuff4"> What is not recyclable</a> <br>
+                    <a href="#stuff5"> How to recycle</a> <br>
+                    <a href="#stuff6"> Useful links</a>
+                </nav>
+            </div>
+        </div>
+        <div class="flex-item-main">
+            <h1> Feedback </h1>
+            <p> Thanks for visiting my website! If you have time, you can fill this feedback form. </p>
+            <form>
+                Choose your gender :
+                <input type="radio" name="gender" value="male">
+                <lable for="male">Male</lable>
+                <input type="radio" name="gender" value="female">
+                <lable for="female">Female</lable>
+                <br>
+                <lable for="age"> Choose your age :</lable>
+                <select id="age">
+                    <option value="1-10">1-10</option>
+                    <option value="11-20">11-20</option>
+                    <option value="21-30">21-30</option>
+                    <option value="31-40">31-40</option>
+                    <option value="41-50">41-50</option>
+                    <option value="51-60">51-60</option>
+                    <option value="61-70">11-70</option>
+                    <option value="71-80">71-80</option>
+                    <option value="81+">81+</option>
+                </select>
+                <br>
+                Choose your property type :
+                <input type="radio" name="property" value="house">
+                <lable for="house">House</lable>
+                <input type="radio" name="property" value="flat">
+                <lable for="flat">Flat</lable>
+                <br>
+                <lable for="people"> How many people live in your appartment :</lable>
+                <select id="people">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="5+">5+</option>
+                </select>
+                <br>
+                <lable for="recycled"> Percent recycled :</lable>
+                <input type="range" min="1" max="100" value="50" class="slider" id="recycled">
+                <br>
+                What do you recycle :
+                <input type="checkbox" name="Plastic bottles">
+                <lable for="Plastic bottles">Plastic bottles</lable>
+                <input type="checkbox" name="Plastic packaging">
+                <lable for="Plastic packaging">Plastic packaging</lable>
+                <input type="checkbox" name="Paper">
+                <lable for="Paper">Paper</lable>
+                <input type="checkbox" name="Glass bottles">
+                <lable for="Glass bottles">Glass bottles</lable>
+                <input type="checkbox" name="Tins">
+                <lable for="Tins">Tins</lable>
+                <input type="checkbox" name="Food waste">
+                <lable for="Food waste">Food waste</lable>
+                <input type="checkbox" name="Electronics">
+                <lable for="Electronics">Electronics</lable>
+                <input type="checkbox" name="Clothes">
+                <lable for="Clothes">Clothes</lable>
+                <input type="checkbox" name="Scrap metal">
+                <lable for="Scrap metal">Scrap metal</lable>
+                <br>
+                <textarea type="text" name="comment" rows="5" cols="60"></textarea>
+                <br>
+                 <button type="button" onclick="alert('Not implemented')">Submit</button> 
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <h1 class="footer"> Thanks for visiting our website! </h1>
+    </footer>
+</body></html>
