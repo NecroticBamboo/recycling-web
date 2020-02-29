@@ -1,11 +1,94 @@
 <!DOCTYPE HTML>
     <html lang="en">
+<!--xmlns="http://www.w3.org/1999/xhtml"-->
 
-    <head>
+<head>
     <meta charset="utf-8" />
     <title> Feedback </title>
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic%7CPoiret+One&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+        :root {
+            --accent-color: #5fb49c;
+            --control-bg: white;
+            --current-bg: #eee;
+            --hover-bg: #ccc;
+        }
+
+        /* The container */
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default checkbox */
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 1px;
+            background-color: var(--current-bg);
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input~.checkmark {
+            background-color: var(--hover-bg);
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked~.checkmark {
+            background-color: var(--accent-color);
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+        }
+
+        .feedback-container {
+            display: flex;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -94,32 +177,58 @@
                 <input type="range" min="1" max="100" value="50" class="slider" id="recycled">
                 <br>
                 What do you recycle :
-                <input type="checkbox" name="Plastic bottles">
-                <lable for="Plastic bottles">Plastic bottles</lable>
-                <input type="checkbox" name="Plastic packaging">
-                <lable for="Plastic packaging">Plastic packaging</lable>
-                <input type="checkbox" name="Paper">
-                <lable for="Paper">Paper</lable>
-                <input type="checkbox" name="Glass bottles">
-                <lable for="Glass bottles">Glass bottles</lable>
-                <input type="checkbox" name="Tins">
-                <lable for="Tins">Tins</lable>
-                <input type="checkbox" name="Food waste">
-                <lable for="Food waste">Food waste</lable>
-                <input type="checkbox" name="Electronics">
-                <lable for="Electronics">Electronics</lable>
-                <input type="checkbox" name="Clothes">
-                <lable for="Clothes">Clothes</lable>
-                <input type="checkbox" name="Scrap metal">
-                <lable for="Scrap metal">Scrap metal</lable>
+                <div class="feedback-container">
+                    <div>
+                        <label for="Plastic bottles" class="container">Plastic bottles
+                            <input type="checkbox" id="Plastic bottles" />
+                            <span class="checkmark"></span></label>
+
+                        <label for="Plastic packaging" class="container">Plastic packaging
+                            <input type="checkbox" id="Plastic packaging" />
+                            <span class="checkmark"></span></label>
+
+                        <label for="Paper" class="container">Paper
+                            <input type="checkbox" id="Paper" />
+                            <span class="checkmark"></span></label>
+
+                        <label for="Glass bottles" class="container">Glass bottles
+                            <input type="checkbox" id="Glass bottles">
+                            <span class="checkmark"></span></label>
+
+                        <label for="Tins" class="container">Tins
+                            <input type="checkbox" id="Tins">
+                            <span class="checkmark"></span></label>
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <label for="Food waste" class="container">Food waste
+                            <input type="checkbox" id="Food waste">
+                            <span class="checkmark"></span></label>
+
+                        <label for="Electronics" class="container">Electronics
+                            <input type="checkbox" id="Electronics">
+                            <span class="checkmark"></span></label>
+
+                        <label for="Clothes" class="container">Clothes
+                            <input type="checkbox" id="Clothes">
+                            <span class="checkmark"></span></label>
+
+                        <label for="Scrap metal" class="container">Scrap metal
+                            <input type="checkbox" id="Scrap metal">
+                            <span class="checkmark"></span></label>
+                    </div>
+                </div>
                 <br>
-                <textarea type="text" name="comment" rows="5" cols="60"></textarea>
+                <textarea type="text" name="comment" rows="5" cols="60" style="resize: none;"></textarea>
                 <br>
-                 <button type="button" onclick="alert('Not implemented')">Submit</button> 
+                <button type="button" onclick="alert('Not implemented')">Submit</button>
             </form>
         </div>
     </div>
     <footer class="footer">
-        <h1 class="footer"> Thanks for visiting our website! </h1>
+        <div>&nbsp;</div>
+        <div class="navigation-footer">
+            <a href="site_map.html"> Site map</a>
+        </div>
+        <div class="footer-copyright">u1821659 </div>
     </footer>
 </body></html>
