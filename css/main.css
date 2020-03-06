@@ -32,11 +32,12 @@ body > .flex-container {
     text-align: center;
 }
 
-.logo-and-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;    
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
+
 .footer {
     display: flex;
     flex-direction: row;
@@ -225,7 +226,7 @@ th {
     }
 
     .map {
-        width: 450px;
+        width: 400px;
         height: 300px;
     }
 
@@ -242,6 +243,14 @@ th {
 
     .ct-img {
         margin: 0;
+    }
+
+    table {
+        width: 45%;
+    }
+
+    textarea {
+        width: 90%;
     }
 }
 
@@ -291,4 +300,5 @@ th {
     header h1 {
         font-size: 50px;
     }
+
 }

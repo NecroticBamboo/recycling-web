@@ -6,11 +6,47 @@
     <title> Utilisation </title>
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic%7CPoiret+One&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+        .flex-item-main {
+            border: 2px solid;
+        }
+
+        table {
+            border: 2px solid;
+            border-collapse: collapse;
+            display: block;
+            overflow-x: auto;
+        }
+
+        td,
+        th {
+            border: 1px solid;
+        }
+
+        th {
+            background: #F3F3F3;
+            font-weight: bold;
+        }
+
+        td {
+            background: #FAFAFA;
+        }
+
+        .statistics td,
+        .answer {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <header class="header">
-        <h1> Welcome </h1>
+        <div class="logo">
+            <img src="images/logo.svg" style="width: 80px; height: 80px;" />
+        </div>
+        <div>
+            <h1> Welcome </h1>
+        </div>
         <div class="flex-container-header">
             <div class="navigation-header">
                 <a href="template.html"> Template</a>
@@ -42,24 +78,24 @@
         <div class="flex-item-aside">
             <div class="sidebar-navigation">
                 <nav class="navigation">
-                    <a href="#utilisation"> Waste utilization</a> <br>
+                    <a href="#utilisation"> Waste utilisation</a> <br>
                     <a href="#recycle"> Can/cannot be recycled </a> <br>
                 </nav>
             </div>
         </div>
         <div class="flex-item-main">
-            <div id="utilization">
-                <h1> Waste utilization </h1>
+            <div id="utilisation">
+                <h1> Waste utilisation </h1>
                 <p> Rubbish we can’t reuse or recycle needs to be utilized somehow. Here we are talking of enormous amounts. Tons and tons of rubbish produced every day. London has two types of general waste utilization - burn and landfill. The company behind it is Cory Riverside Energy. They collect rubbish using waste trucks and barges. All this litter then goes to an incinerator plant near Erith and a landfill on the other side of the river.</p>
                 <p>Take a look at that table made by <a href="https://data.london.gov.uk/publisher/defra">Department for Environment Food and Rural Affairs</a>. This table shows the proportion of collected household waste which is recycled or composted from 1998 to 2019. It only shows one region of London and England as a whole. The numbers are calculated using this formula:</p>
                 X/Y*100 where:
                 <ul>
                     <li>X = Tonnage of household waste collected by the Waste Collection Authorities(WCA) which is sent for recycling/composting</li>
                     <li>Y = Total tonnage of household waste collected by the Waste Collection Authorities</li>
-                </ul>    
+                </ul>
             </div>
             <div>
-                <table border=1 width=100%>
+                <table width=80% class="statistics">
                     <tr>
                         <th>Region:</th>
                         <td>Westminster(Central)</td>
@@ -262,19 +298,99 @@
             </div>
             <div id="recycle">
                 <h1> What can/cannot be recycled</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <table border=1 width=100%>
+                <p>This table illustrates some items that can/cannot be recycled. WARNIG: In some countries this table can be different! For more information research dedicated sites.</p>
+                <table width=80% class="recyclable">
                     <tr>
                         <th>Item</th>
                         <th>Recyclable?</th>
                     </tr>
                     <tr>
-                        <td>Jill</td>
-                        <td>Smith</td>
+                        <td>Paper</td>
+                        <td class="answer">Yes</td>
                     </tr>
                     <tr>
-                        <td>Eve</td>
-                        <td>Jackson</td>
+                        <td>Tissue boxes</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Newspaper</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Food packaging</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Books</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Cardboard</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Shoeboxes</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Aluminum foil</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Kitchen cookware</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>All colors glass bottles and jars</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Glass food containers</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>All plastic numbers 1-7</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Plastic cups</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Plastic jugs</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Soap bootles</td>
+                        <td class="answer">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Tissue paper</td>
+                        <td class="answer">No</td>
+                    </tr>
+                    <tr>
+                        <td>Paper towels</td>
+                        <td class="answer">No</td>
+                    </tr>
+                    <tr>
+                        <td>Motor oil cans</td>
+                        <td class="answer">No</td>
+                    </tr>
+                    <tr>
+                        <td>Paint cans</td>
+                        <td class="answer">No</td>
+                    </tr>
+                    <tr>
+                        <td>Light bulbs</td>
+                        <td class="answer">No</td>
+                    </tr>
+                    <tr>
+                        <td>Ceramic or marble</td>
+                        <td class="answer">No</td>
+                    </tr>
+                    <tr>
+                        <td>Wax paper</td>
+                        <td class="answer">No</td>
                     </tr>
                 </table>
             </div>
