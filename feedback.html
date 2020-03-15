@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-    <html lang="en">
+<html lang="en">
 <!--xmlns="http://www.w3.org/1999/xhtml"-->
 
 <head>
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic%7CPoiret+One&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <style>
-        /*===== Styles for checkboxes =====*/
+        /*===== Checkboxes =====*/
         :root {
             --accent-color: #5fb49c;
             --control-bg: white;
@@ -27,9 +27,6 @@
             margin-bottom: 12px;
             cursor: pointer;
             font-size: 18px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
             user-select: none;
         }
 
@@ -42,7 +39,7 @@
             width: 0;
         }
 
-        /* Create a custom checkbox */
+        /* Create a custom checkbox. This is a square rotated by 45 degrees */
         .checkmark {
             position: absolute;
             top: 0;
@@ -51,8 +48,6 @@
             width: 20px;
             border-radius: 1px;
             background-color: var(--current-bg);
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
             transform: rotate(45deg);
         }
 
@@ -78,7 +73,7 @@
             display: block;
         }
 
-        /* Style the checkmark/indicator */
+        /* Style the white checkmark/indicator */
         .container .checkmark:after {
             left: 6px;
             top: 2px;
@@ -87,16 +82,18 @@
             border: solid white;
             border-width: 0 3px 3px 0;
         }
-        
+
         /*===== Feedback =====*/
         .feedback-container {
             display: flex;
             margin-top: 5px;
+            margin-left: 10px;
         }
     </style>
 </head>
 
 <body>
+    <!-- =========================== HEADER ============================== -->
     <header class="header">
         <div class="logo">
             <img src="images/logo.svg" alt="logo" style="width: 75px; height: 75px;" />
@@ -105,9 +102,11 @@
             Welcome
         </div>
         <div class="flex-container-header">
+<!--
             <div class="navigation-header">
                 <a href="template.html"> Template</a>
             </div>
+-->
             <div class="navigation-header">
                 <a href="index.html"> Home </a>
             </div>
@@ -129,17 +128,18 @@
         </div>
     </header>
     <div class="flex-container">
+        <!-- =========================== BODY CONTENT ============================== -->
         <div class="flex-item-main-feedback">
             <h1> Feedback </h1>
             <p> Thanks for visiting my website! If you have time, you can fill this feedback form. </p>
             <form>
                 Choose your gender :
                 <input type="radio" name="gender" value="male">
-                <lable for="male">Male</lable>
+                <label for="male">Male</label>
                 <input type="radio" name="gender" value="female">
-                <lable for="female">Female</lable>
+                <label for="female">Female</label>
                 <br>
-                <lable for="age"> Choose your age :</lable>
+                <label for="age"> Choose your age :</label>
                 <select id="age">
                     <option value="1-10">1-10</option>
                     <option value="11-20">11-20</option>
@@ -154,11 +154,11 @@
                 <br>
                 Choose your property type :
                 <input type="radio" name="property" value="house">
-                <lable for="house">House</lable>
+                <label for="house">House</label>
                 <input type="radio" name="property" value="flat">
-                <lable for="flat">Flat</lable>
+                <label for="flat">Flat</label>
                 <br>
-                <lable for="people"> How many people live in your appartment :</lable>
+                <label for="people"> How many people live in your appartment :</label>
                 <select id="people">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -168,7 +168,7 @@
                     <option value="5+">5+</option>
                 </select>
                 <br>
-                <lable for="recycled"> Percent recycled :</lable>
+                <label for="recycled"> Percent recycled :</label>
                 <input type="range" min="1" max="100" value="50" class="slider" id="recycled">
                 <br>
                 What do you recycle :
@@ -217,8 +217,10 @@
                 <br>
                 <button type="button" onclick="alert('Not implemented')">Submit</button>
             </form>
+            <!-- =========================== END OF CONTENT ============================== -->
         </div>
     </div>
+    <!-- =========================== FOOTER ============================== -->
     <footer class="footer" id="bottom-nav">
         <div class="navigation-footer">
             <a href="site_map.html"> Site map</a>
@@ -231,4 +233,6 @@
         </div>
         <div class="footer-copyright">u1821659 </div>
     </footer>
-</body></html>
+</body>
+
+</html>

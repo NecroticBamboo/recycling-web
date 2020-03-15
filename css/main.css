@@ -1,5 +1,4 @@
 /* --------------- Global --------------------- */
-
 html {
     font-family: 'Didact Gothic', sans-serif;
 }
@@ -27,7 +26,6 @@ body > .flex-container {
 }
 
 /* --------------- HEADER --------------------- */
-
 .header,
 .footer {
     background-color: #5fb49c;
@@ -39,8 +37,8 @@ body > .flex-container {
     position: absolute;
     left: 10px;
     top: 5px;
-    width:30px;
-    height:30px;
+    width: 30px;
+    height: 30px;
 }
 
 .title {
@@ -71,43 +69,8 @@ a:visited {
     color: black;
 }
 
-/* --------------- Footer --------------------- */
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.footer div {
-    margin-top: 5px;
-    margin-left: 5px;
-}
-
-.footer-copyright::before {
-    content: '\00a9';
-    margin-right: 5px;
-}
-
-.footer-copyright {
-    margin-right: 10px;
-    font-size: 9pt;
-}
-
-.navigation-footer {
-    margin-bottom: 4px;
-    font-size: 9pt;
-}
-
-.navigation-footer a:hover {
-    background-color: white;
-    color: black;
-}
-
 /* --------------- Body --------------------- */
-
 .flex-container-header {
-    /*    border: 1px solid blue;*/
     flex-basis: auto;
     font-size: 25px;
     justify-content: center;
@@ -117,7 +80,6 @@ a:visited {
 
 
 .flex-container {
-    /*    background-color: #75dddd;*/
     position: relative;
     flex: 1 0 auto;
     text-align: left;
@@ -156,7 +118,6 @@ a {
 .flex-item-main {
     max-width: 1064px;
     box-sizing: border-box;
-    /*    border: 1px solid blue;*/
     padding: 24px;
 }
 
@@ -172,15 +133,45 @@ a {
     flex-direction: row;
 }
 
-/* --------------- Site map --------------------- */
+/* --------------- Footer --------------------- */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+.footer div {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.footer-copyright::before {
+    content: '\00a9';
+    margin-right: 5px;
+}
+
+.footer-copyright {
+    margin-right: 10px;
+    font-size: 9pt;
+}
+
+.navigation-footer {
+    margin-bottom: 4px;
+    font-size: 9pt;
+}
+
+.navigation-footer a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* --------------- Site map --------------------- */
 .site_map a {
     font-size: 20px;
     color: #5fb49c;
 }
 
 /* --------------- Utilities --------------------- */
-
 .picture,
 .graph {
     max-width: 100%;
@@ -192,17 +183,16 @@ a {
     height: 450px;
 }
 
-/* --------------- TABLES --------------------- */
-
+/* --------------- Tables --------------------- */
 table {
     border: 0;
     border-collapse: collapse;
     display: block;
     overflow-x: auto;
-    width:100%;
+    width: 100%;
 }
 
-tr{
+tr {
     border: 0;
 }
 
@@ -220,8 +210,24 @@ td {
     text-align: center;
 }
 
-/* --------------- MOBILE SUPPORT --------------------- */
+/* --------------- Form --------------------- */
+form {
+    background-color: #FAFAFA;
+}
 
+button {
+    width: 10%;
+    padding: 5px;
+    border-radius: 12px;
+    color: white;
+    background-color: #5fb49c;
+}
+
+.test-button{
+    width: 6%;
+}
+
+/* --------------- Mobile support --------------------- */
 @media screen and (max-width: 825px) {
     .flex-container-header {
         font-size: 25px;

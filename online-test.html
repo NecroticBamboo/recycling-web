@@ -10,9 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic%7CPoiret+One&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <style>
-        .test-form {
-        }
-
         .test-container {
             display: flex;
             flex-direction: row;
@@ -23,21 +20,51 @@
             margin-left: 5px;
             width: 100%;
         }
+        
+        #test-header{
+            margin-bottom: 0;
+            background-color: #5fb49c;
+            color: white;
+        }
+        
         .hidden {
             display: none;
         }
+
         .ans-correct {
             color: green;
         }
+
         .ans-incorrect {
             color: red;
+        }
+        
+        /*===== Styles for checkboxes =====*/
+
+        /* hide original check box */
+        .lbl-cb input[type='checkbox'] {
+            display:none;
+        }
+
+        /* UNCHECKED shows "put in a trash can" symbol before the label*/
+        .lbl-cb input[type='checkbox'] + label:before {
+            content:"\1F6AE";
+            display: inline-block;
+            min-width:25px;
+            margin-right:5px;
+        }
+
+        /* CHECKED shows "recycle" symbol before the label*/
+        .lbl-cb input[type='checkbox']:checked + label:before {
+            content: "\267B";
+            color: green;
         }
     </style>
     <script src="scripts/online-test.js"></script>
 </head>
 
 <body onload="init_test()">
-
+    <!-- =========================== HEADER ============================== -->
     <header class="header">
         <div class="logo">
             <img src="images/logo.svg" alt="logo" style="width: 75px; height: 75px;" />
@@ -45,11 +72,13 @@
         <div class="title">
             Online test
         </div>
-
+        
         <div class="flex-container-header">
+<!--
             <div class="navigation-header">
                 <a href="template.html"> Template </a>
             </div>
+-->
             <div class="navigation-header">
                 <a href="index.html"> Home </a>
             </div>
@@ -70,77 +99,42 @@
             </div>
         </div>
     </header>
-
     <div class="flex-container">
+        
+        <!-- =========================== BODY CONTENT ============================== -->
         <div class="flex-item-main-home">
             <h1> Do you know your trash? </h1>
             <p> Below is a short online test (no registration or email required) testing ow well you know what can be recycled and what is not.</p>
             <p>Please, click on the items below to set your answer. Trash can means that item is not recyclable while recycle sign indicate that it can be recycled.</p>
             <p>At the end of the test your score will be revealed.</p>
 
-            <form class="test-from">
+            <form class="test-form">
                 <h2 id="test-header">Header</h2>
-                <div class="flex-container test-container">
+                <div class="test-container">
                     <div class="test-column">
-                        <div>
-                            <label for="t1" id="l1"></label>
-                            <input type="checkbox" class="test-check" id="t1" />
-                        </div>
-                        <div>
-                            <label for="t2" id="l2"></label>
-                            <input type="checkbox" class="test-check" id="t2" />
-                        </div>
-                        <div>
-                            <label for="t3" id="l3"></label>
-                            <input type="checkbox" class="test-check" id="t3" />
-                        </div>
-                        <div>
-                            <label for="t4" id="l4"></label>
-                            <input type="checkbox" class="test-check" id="t4" />
-                        </div>
-                        <div>
-                            <label for="t5" id="l5"></label>
-                            <input type="checkbox" class="test-check" id="t5" />
-                        </div>
-                        <div>
-                            <label for="t6" id="l6"></label>
-                            <input type="checkbox" class="test-check" id="t6" />
-                        </div>
+                        <div class="lbl-cb"><input type="checkbox" id="t1" /><label id="l1" for="t1"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t2" /><label id="l2" for="t2"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t3" /><label id="l3" for="t3"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t4" /><label id="l4" for="t4"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t5" /><label id="l5" for="t5"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t6" /><label id="l6" for="t6"/></div>
                     </div>
                     <div class="test-column">
-                        <div>
-                            <label for="t7" id="l7"></label>
-                            <input type="checkbox" class="test-check" id="t7" />
-                        </div>
-                        <div>
-                            <label for="t8" id="l8"></label>
-                            <input type="checkbox" class="test-check" id="t8" />
-                        </div>
-                        <div>
-                            <label for="t9" id="l9"></label>
-                            <input type="checkbox" class="test-check" id="t9" />
-                        </div>
-                        <div>
-                            <label for="t10" id="l10"></label>
-                            <input type="checkbox" class="test-check" id="t10" />
-                        </div>
-                        <div>
-                            <label for="t11" id="l11"></label>
-                            <input type="checkbox" class="test-check" id="t11" />
-                        </div>
-                        <div>
-                            <label for="t12" id="l12"></label>
-                            <input type="checkbox" class="test-check" id="t12" />
-                        </div>
+                        <div class="lbl-cb"><input type="checkbox" id="t7" /><label id="l7" for="t7"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t8" /><label id="l8" for="t8"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t9" /><label id="l9" for="t9"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t10" /><label id="l10" for="t10"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t11" /><label id="l11" for="t11"/></div>
+                        <div class="lbl-cb"><input type="checkbox" id="t12" /><label id="l12" for="t12"/></div>
                     </div>
                 </div>
                 <button class="test-button hidden" type="button" id="button-next" onclick="moveNext()">Next</button>
                 <button class="test-button" type="button" id="button-reveal" onclick="reveal()">Submit</button>
             </form>
+            <!-- =========================== END OF CONTENT ============================== -->
         </div>
-
     </div>
-
+    <!-- =========================== FOOTER ============================== -->
     <footer class="footer" id="bottom-nav">
         <div class="navigation-footer">
             <a href="site_map.html"> Site map</a>
@@ -154,4 +148,5 @@
         <div class="footer-copyright">u1821659 </div>
     </footer>
 </body>
+
 </html>
