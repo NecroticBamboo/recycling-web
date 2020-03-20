@@ -278,20 +278,20 @@ button {
 
 @media screen and (max-device-width: 450px) {
     body{
-        font-size: 21px;
+        font-size: 27px;
     }
     
     .navigation-footer{
-        font-size: 18px;
+        font-size: 20px;
     }
+    
     .flex-container-header {
-        /*    border: 1px solid blue;*/
         font-size: 25px;
         justify-content: center;
         display: flex;
         flex-direction: column;
     }
-
+    
     .flex-item-aside {
         width: 100%;
     }
@@ -316,21 +316,32 @@ button {
     }
 
     .navigation a {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .navigation-header a,
     .navigation-header-selected,
     .site_map a {
-        font-size: 28px;
+        font-size: 50px;
     }
-
+    
+    .title{
+        font-size: 45px;
+    }
+    
     header h1 {
         font-size: 50px;
     }
     
     .test-form{
-        font-size: 30px;
+        font-size: 36px;
+    }
+    
+    .test-button{
+        width: 15%;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 12px; 
     }
     
     .feedback-form{
